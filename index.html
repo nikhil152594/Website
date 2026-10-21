@@ -117,6 +117,44 @@ nav a.on{color:var(--brand);background:var(--tint)}
 .avail{background:var(--tint);border-left:3px solid var(--accent);border-radius:8px;padding:12px 16px;margin:0 0 22px;font-weight:500}
 .about{max-width:72ch}
 .about p{margin:0 0 1.15em;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;line-height:1.8;font-size:1.03rem}
+@keyframes pg{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes draw{from{stroke-dashoffset:900}to{stroke-dashoffset:0}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes sweep{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes drift{from{background-position:-1px -1px}to{background-position:31px 31px}}
+.hero{animation:drift 40s linear infinite}
+.page.on{animation:pg .45s ease backwards}
+.hero-text>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) backwards}
+.hero-text>:nth-child(2){animation-delay:.1s}.hero-text>:nth-child(3){animation-delay:.2s}.hero-text>:nth-child(4){animation-delay:.3s}.hero-text>:nth-child(5){animation-delay:.4s}
+.draw svg path,.draw svg rect{stroke-dasharray:900;stroke-dashoffset:0;animation:draw 2.2s ease-out backwards}
+.draw svg g:first-of-type path{animation-delay:.1s}
+.draw svg rect{animation-delay:.6s}
+.draw svg g[stroke] path{animation-delay:1.3s}
+.draw svg text{animation:fade 1s 2.3s backwards}
+.page.on :is(.grid,.pillars,.pubs,.tl,.chips,.facts)>*{animation:rise .6s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0)*70ms)}
+.page.on h2{animation:rise .5s ease backwards}
+h2{position:relative}
+h2::after{content:"";position:absolute;left:0;bottom:-2px;width:72px;height:2px;background:var(--accent);transform-origin:left;animation:sweep .7s .25s ease backwards}
+nav a{position:relative;transition:color .2s,background .2s}
+nav a.on::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:2px;background:var(--accent);transform-origin:left;animation:sweep .35s ease backwards}
+.card,.pillar,.pubs li,.chips li,.btn,.facts>div{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease,color .25s ease}
+.card:hover,.pillar:hover,.pubs li:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(10,20,40,.14)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(31,74,168,.28)}
+.chips li:hover{transform:translateY(-2px);background:var(--brand);color:var(--surface)}
+.chips li:hover b{color:inherit}
+.facts>div:hover{background:var(--tint)}
+.rec{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.rec .card{display:flex;flex-direction:column;align-items:flex-start;padding:22px;border:1px solid var(--line);border-top:3px solid var(--brand);position:relative;overflow:hidden}
+.rec .card::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:var(--tint);z-index:0}
+.rec .card>*{position:relative;z-index:1}
+.rec .card .txt{margin:2px 0 0;color:var(--ink);font-size:15.5px;line-height:1.75}
+.rec .who{display:flex;align-items:center;gap:12px;align-self:stretch;margin-top:auto;padding-top:18px}
+.rec .card .txt+.who{margin-top:20px;border-top:1px dashed var(--line)}
+.av{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:var(--surface);font:600 15px "IBM Plex Serif",Georgia,serif;transition:transform .3s ease}
+.rec .card:hover .av{transform:rotate(-8deg) scale(1.08)}
+.rec .who .by{margin:0;font-weight:600}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media print{#viewer{display:none!important}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
@@ -274,11 +312,11 @@ nav a.on{color:var(--brand);background:var(--tint)}
 <h2>Recommendations</h2>
 <p class="sub">Summarised from letters of recommendation.</p>
 <div class="grid rec">
-<div class="card"><p>Taught first-year courses through to Structural Analysis and Structural Design, and guided student seminars and industry-sponsored projects. Also took on ERP, laboratory and NAAC accreditation duties, and was invited as an external examiner by other institutes.</p><p class="by">Prof. Vijay Wairagade</p></div>
-<div class="card"><p>Worked alongside Nikhil on the Research and Development Committee for two years and valued his organisation and attention to detail in running IPR seminars and workshops. Also noted his four patent publications and his proactive pursuit of research grants from government agencies.</p><p class="by">Dr. Poorna Shankar</p></div>
-<div class="card"><p>Guided Nikhil&rsquo;s Master&rsquo;s project on recycled aggregate concrete, later published in a journal, and called him one of the exceptional students of his career. Highlighted his organisation of a two-day state-level workshop and his initiative in learning STAAD.Pro and ANSYS.</p><p class="by">Dr. G. R. Patil</p></div>
-<div class="card"><p>Mentored Nikhil&rsquo;s final-year SONREB project, which won 2nd prize at INNOVATION&ndash;2015, and praised his steady commitment, practical knowledge and communication skills. He was the anchor for the department&rsquo;s technical and non-technical events.</p><p class="by">Mr. Sachin Patil</p></div>
-<div class="card"><p>A fellow Structural Engineering student at Rajarshi Shahu College of Engineering, who describes Nikhil as a positive, supportive teammate who helped friends with the practical side of their projects.</p><p class="by">Mr. Ranjit Rangrao Chavan</p></div>
+<div class="card"><span class="tag">Teaching &amp; leadership</span><p class="txt">Taught first-year courses through to Structural Analysis and Structural Design, and guided student seminars and industry-sponsored projects. Also took on ERP, laboratory and NAAC accreditation duties, and was invited as an external examiner by other institutes.</p><div class="who"><span class="av">VW</span><p class="by">Prof. Vijay Wairagade</p></div></div>
+<div class="card"><span class="tag">Research &amp; innovation</span><p class="txt">Worked alongside Nikhil on the Research and Development Committee for two years and valued his organisation and attention to detail in running IPR seminars and workshops. Also noted his four patent publications and his proactive pursuit of research grants from government agencies.</p><div class="who"><span class="av">PS</span><p class="by">Dr. Poorna Shankar</p></div></div>
+<div class="card"><span class="tag">Postgraduate research</span><p class="txt">Guided Nikhil&rsquo;s Master&rsquo;s project on recycled aggregate concrete, later published in a journal, and called him one of the exceptional students of his career. Highlighted his organisation of a two-day state-level workshop and his initiative in learning STAAD.Pro and ANSYS.</p><div class="who"><span class="av">GP</span><p class="by">Dr. G. R. Patil</p></div></div>
+<div class="card"><span class="tag">Testing &amp; communication</span><p class="txt">Mentored Nikhil&rsquo;s final-year SONREB project, which won 2nd prize at INNOVATION&ndash;2015, and praised his steady commitment, practical knowledge and communication skills. He was the anchor for the department&rsquo;s technical and non-technical events.</p><div class="who"><span class="av">SP</span><p class="by">Mr. Sachin Patil</p></div></div>
+<div class="card"><span class="tag">Teamwork</span><p class="txt">A fellow Structural Engineering student at Rajarshi Shahu College of Engineering, who describes Nikhil as a positive, supportive teammate who helped friends with the practical side of their projects.</p><div class="who"><span class="av">RC</span><p class="by">Mr. Ranjit Rangrao Chavan</p></div></div>
 </div>
 </section>
 
@@ -289,8 +327,8 @@ nav a.on{color:var(--brand);background:var(--tint)}
 <div class="contact">
 <div><p>Email</p><a href="mailto:nikhil.mulik@outlook.com">nikhil.mulik@outlook.com</a></div>
 <div><p>LinkedIn</p><a href="https://www.linkedin.com/in/nvmulik" target="_blank" rel="noopener">linkedin.com/in/nvmulik</a></div>
-<div class="loc"><p>In Riga, Latvia</p><address>Hipokrata iela 3, Riga, Latvia, 1079</address><a href="tel:+37125717951">+371 25 717 951</a></div>
-<div class="loc"><p>In India</p><address>Adinath Colony, Rahatani, Pimpri, Pune, India, 411017</address><a href="tel:+919225296035">+91 9225296035</a></div>
+<div class="loc"><p>Latvia</p><address>Hipokrata iela 3, Riga, Latvia, 1079</address><a href="tel:+37125717951">+371 25 717 951</a></div>
+<div class="loc"><p>India</p><address>Adinath Colony, Rahatani, Pimpri, Pune, India, 411017</address><a href="tel:+919225296035">+91 9225296035</a></div>
 </div>
 </section>
 </main>
@@ -323,7 +361,7 @@ window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(rende
 function show(){var h=(location.hash||"#home").slice(1);if(ids.indexOf(h)<0)h="home";
 ids.forEach(function(i){document.getElementById(i).classList.toggle("on",i===h)});
 document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});
-window.scrollTo(0,0)}
+window.scrollTo(0,0);document.getElementById(h).querySelectorAll(".grid,.pillars,.pubs,.tl,.chips,.facts").forEach(function(c){for(var i=0;i<c.children.length;i++)c.children[i].style.setProperty("--i",Math.min(i,8))})}
 window.addEventListener("hashchange",show);show()})();
 </script>
 </body>
