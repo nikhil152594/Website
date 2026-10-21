@@ -29,7 +29,7 @@ nav a:hover{color:var(--brand);background:var(--tint)}
 .hero{background:var(--surface);border-bottom:1px solid var(--line);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px}
 .hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center;padding-top:64px;padding-bottom:64px}
 .hero-text{background:var(--surface);padding:6px 0}
-h1{font:600 clamp(2.2rem,5.5vw,3.6rem)/1.08 "IBM Plex Serif",Georgia,serif;margin:0 0 14px;letter-spacing:-.01em}
+h1{font:600 clamp(1.9rem,4.6vw,3rem)/1.12 "IBM Plex Serif",Georgia,serif;margin:0 0 14px;letter-spacing:-.01em}
 .role{font-size:1.15rem;font-weight:500;color:var(--brand);margin:0 0 14px}
 .lead{color:var(--muted);max-width:56ch;margin:0 0 24px}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
@@ -102,6 +102,19 @@ nav a.on{color:var(--brand);background:var(--tint)}
 .rec .by{margin:12px 0 0;font-weight:600;color:var(--ink)}
 .meth{display:block;margin-top:6px;color:var(--ink);font-size:14.5px}
 .meth b{color:var(--brand)}
+.eyebrow{margin:0 0 8px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:.85rem;color:var(--accent)}
+.ph{margin-top:44px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:20px}
+.pillar{display:block;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:10px;padding:16px 18px}
+.pillar:hover{border-top-color:var(--accent)}
+.pillar b{display:block;font-size:1.02rem;margin-bottom:4px}
+.pillar span{color:var(--muted);font-size:14.5px}
+.pillar em{display:block;margin-top:10px;font-style:normal;color:var(--brand);font-weight:600;font-size:14px}
+.star dl{margin:8px 0 0}
+.star dt{font-weight:600;color:var(--brand);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;margin-top:12px}
+.star dd{margin:2px 0 0;color:var(--muted);font-size:15px}
+.star dd.res{margin-top:4px;padding:10px 12px;background:var(--tint);border-radius:8px;color:var(--ink);font-weight:500}
+.avail{background:var(--tint);border-left:3px solid var(--accent);border-radius:8px;padding:12px 16px;margin:0 0 22px;font-weight:500}
 .about{max-width:72ch}
 .about p{margin:0 0 1.15em;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;line-height:1.8;font-size:1.03rem}
 @media print{#viewer{display:none!important}}
@@ -118,10 +131,11 @@ nav a.on{color:var(--brand);background:var(--tint)}
 <main id="top">
 <div class="page" id="home"><div class="hero"><div class="wrap">
 <div class="hero-text">
-<h1>Nikhil Mulik</h1>
-<p class="role">Civil &amp; Structural Engineer · MSc Civil Construction and Real Estate Management</p>
-<p class="lead">Six years of structural teaching, research and technical consultancy, now moving into full-time site and structural practice. Based in Riga, Latvia, and open to relocation.</p>
-<div class="btns"><a class="btn pri" href="#contact">Get in touch</a><a class="btn sec" href="https://www.linkedin.com/in/nvmulik" target="_blank" rel="noopener">LinkedIn</a></div>
+<p class="eyebrow">Nikhil Mulik</p>
+<h1>Bridging structural research and on-site delivery</h1>
+<p class="role">Former Assistant Professor and Structural Engineer · Seeking on-site civil and structural roles</p>
+<p class="lead">Six years of structural design teaching, research and consultancy, plus on-site RCC supervision on projects worth ₹5 Cr+. MSc in Civil Construction and Real Estate Management (RTU, Distinction). Based in Riga, Latvia, and open to relocation.</p>
+<div class="btns"><a class="btn pri" href="#contact">Let&rsquo;s connect</a><a class="btn sec" href="#experience">View my experience</a><a class="btn sec" href="https://www.linkedin.com/in/nvmulik" target="_blank" rel="noopener">LinkedIn</a></div>
 </div>
 <div class="draw" aria-hidden="true">
 <svg viewBox="0 0 240 330" fill="none" stroke="currentColor" stroke-width="1.2">
@@ -137,21 +151,29 @@ nav a.on{color:var(--brand);background:var(--tint)}
 <div><b>7</b><span>Patents, designs &amp; copyrights</span></div>
 <div><b>5</b><span>Peer-reviewed papers</span></div>
 <div><b>9.26/10</b><span>MSc GPA, Distinction</span></div>
-</div></div></div>
+</div>
+<h2 class="ph">What I bring</h2>
+<div class="pillars">
+<a class="pillar" href="#experience"><b>On-site delivery</b><span>Supervised RCC works, subcontractors and programmes on projects worth ₹5 Cr+.</span><em>See experience</em></a>
+<a class="pillar" href="#projects"><b>Structural analysis &amp; design</b><span>ETABS, STAAD.Pro and Revit, with IS and Eurocode design experience.</span><em>See case studies</em></a>
+<a class="pillar" href="#research"><b>Research &amp; innovation</b><span>7 patent, design and copyright filings, 5 papers and 2 book contributions.</span><em>See research</em></a>
+<a class="pillar" href="#recommendations"><b>Leadership &amp; mentorship</b><span>Led labs, committees and accreditation work; mentored student teams for six years.</span><em>See recommendations</em></a>
+</div>
+</div></div>
 
 <section class="page wrap" id="about">
 <h2>About</h2>
 <p class="sub">Technical depth from academia, applied on site.</p>
-<div class="about"><p>I am a civil engineer moving from structural academia and research into full-time industry practice. I hold a 2026 MSc in Civil Construction and Real Estate Management from Riga Technical University (Distinction) and a Master&rsquo;s in Structural Engineering.</p><p>My grounding covers structural design software, concrete technology and construction quality assessment, backed by peer-reviewed research and patented innovation.</p><p>I am looking for a junior- to mid-level civil or structural engineering role where technical depth and a fast learning curve add value.</p></div>
+<div class="about"><p>I am a civil engineer moving from structural academia and research into full-time industry practice. I hold a 2026 MSc in Civil Construction and Real Estate Management from Riga Technical University (Distinction) and a Master&rsquo;s in Structural Engineering.</p><p>My grounding covers structural design software, concrete technology and construction quality assessment, backed by peer-reviewed research and patented innovation.</p><p>Teaching and research gave me depth in structural behaviour, concrete technology and quality assessment. My site work at Shereasava Enterprises and my MSc in Riga are where I started applying that depth to delivery: checking work against design intent, coordinating subcontractors and keeping programmes on track. I am now moving into industry to do this full time, in a junior- to mid-level civil or structural engineering role where technical depth and a fast learning curve add value.</p></div>
 </section>
 
 <section class="page wrap" id="experience">
-<h2>Experience</h2>
-<p class="sub">From the classroom to the construction site.</p>
+<h2>Experience &amp; Impact</h2>
+<p class="sub">Outcomes and scale, from the classroom to the construction site.</p>
 <ol class="tl">
 <li><div class="when">04/2025 – 06/2025<br>Riga, Latvia</div><div><h3>Intern, Market and Development Analysis</h3><p class="org">SIA Dream Property Management</p><ul><li>Analysed local property market activity and development trends to support strategic planning.</li></ul></div></li>
 <li><div class="when">09/2024 – 01/2025<br>Pune, India</div><div><h3>Assistant Engineer</h3><p class="org">Shereasava Enterprises</p><ul><li>Supervised RCC construction on two projects worth ₹5 Cr+ (approx. €550,000): a G+1 residential bungalow, followed from foundation to door and window installation, and an 8-storey apartment building, where I managed the RCC work on three of the eight storeys.</li><li>Used Revit for structural modelling and coordination, supporting design interpretation and on-site execution.</li><li>Carried out Revit design work for residential bungalows.</li><li>Ensured compliance with design, safety and programme requirements; coordinated subcontractors and resolved technical issues.</li><li>Conducted site inspections and progress reporting; look-ahead planning contributed to a 20% reduction in project delays.</li></ul></div></li>
-<li><div class="when">08/2018 – 08/2024<br>Pune, India</div><div><h3>Assistant Professor</h3><p class="org">Indira College of Engineering and Management</p><ul><li>Delivered structural analysis and design teaching over six years, from first-year foundation subjects to final-year structural and steel design, and built student capability in ETABS, STAAD.Pro and Revit-based BIM workflows.</li><li>Supervised industry-sponsored and in-house student projects and research, and was invited as an external examiner by multiple institutes.</li><li>Prepared grant proposals for government and international agencies, including iHub-AWaDH (IIT Ropar) and CWPRS, as a Research Committee member.</li><li>Drove innovation output on the Research and Development Committee: organised IPR seminars and workshops, and contributed to 7 patent, design and copyright filings (2022&ndash;24) and 2 book contributions.</li><li>Supported accreditation and compliance as NAAC criteria in-charge and on the institute&rsquo;s AICTE-norm restructuring; also served as ERP coordinator, CAD and Mechanics laboratory in-charge, and Laboratory Consultancy Coordinator.</li></ul></div></li>
+<li><div class="when">08/2018 – 08/2024<br>Pune, India</div><div><h3>Assistant Professor</h3><p class="org">Indira College of Engineering and Management</p><ul><li>Designed and delivered structural analysis and design curricula over six years, from first-year foundation subjects to final-year steel and structural design, building student capability in ETABS, STAAD.Pro and Revit-based BIM workflows.</li><li>Mentored and coached student teams on industry-sponsored and in-house projects and research, and was invited as an external examiner by multiple institutes.</li><li>Wrote funding proposals for government and international agencies, including iHub-AWaDH (IIT Ropar) and CWPRS, as a Research Committee member.</li><li>Drove innovation output on the Research and Development Committee: organised IPR seminars and workshops, and contributed to 7 patent, design and copyright filings (2022&ndash;24) and 2 book contributions.</li><li>Collaborated across departments on accreditation and compliance as NAAC criteria in-charge and on the institute&rsquo;s AICTE-norm restructuring; also ERP coordinator, CAD and Mechanics laboratory in-charge, and Laboratory Consultancy Coordinator.</li></ul></div></li>
 <li><div class="when">01/2017 – 08/2018<br>Pune, India</div><div><h3>Lecturer</h3><p class="org">Suman Ramesh Tulsiani Technical Campus</p><ul><li>Guided undergraduate students through structural design projects and seminars.</li></ul></div></li>
 <li><div class="when">08/2016 – 01/2017<br>Pune, India</div><div><h3>Intern</h3><p class="org">Tejas Buildcon Builders and Developers</p><ul><li>Coordinated subcontractors and site resources, reducing material waste by 12%.</li><li>Assisted in developing detailed project execution plans in consultation with clients.</li></ul></div></li>
 <li><div class="when">08/2015 – 04/2016<br>Pune, India</div><div><h3>Visiting Lecturer</h3><p class="org">Bharati Vidyapeeth&rsquo;s College of Engineering</p><ul><li>Delivered civil engineering coursework.</li></ul></div></li>
@@ -175,7 +197,14 @@ nav a.on{color:var(--brand);background:var(--tint)}
 </section>
 
 <section class="page wrap" id="projects">
-<h2>Projects</h2>
+<h2>Case Studies</h2>
+<p class="sub">Three projects, told as Situation, Task, Action and Result.</p>
+<div class="grid star">
+<div class="card"><span class="tag">Site delivery · 2024&ndash;25</span><h3>RCC works on an 8-storey apartment building</h3><dl><dt>Situation</dt><dd>Shereasava Enterprises was third-party contractor for the RCC works of an 8-storey apartment building in Pune, one of two sites (with a G+1 bungalow) worth ₹5 Cr+ together.</dd><dt>Task</dt><dd>Manage the RCC work on three of the eight storeys, keeping it compliant with design, safety and programme requirements.</dd><dt>Action</dt><dd>Ran site inspections, coordinated subcontractors and resources, resolved technical issues, and used look-ahead planning and progress reporting.</dd><dt>Result</dt><dd class="res">Contributed to a 20% reduction in project delays.</dd></dl></div>
+<div class="card"><span class="tag">Structural analysis · 2023&ndash;24</span><h3>45-storey RCC frame with outriggers</h3><dl><dt>Situation</dt><dd>Tall reinforced concrete frames face large lateral deflection, and outrigger placement is a key design decision.</dd><dt>Task</dt><dd>Show how outrigger configurations reduce deflection compared with conventional RC systems.</dd><dt>Action</dt><dd>Compared several outrigger placements using concrete and steel-braced trusses, against frames with and without shear walls.</dd><dt>Result</dt><dd class="res">A documented comparison of configurations, registered as copyright L-150695/2024.</dd></dl></div>
+<div class="card"><span class="tag">Quality assessment · 2014&ndash;15</span><h3>Combined non-destructive testing (SONREB)</h3><dl><dt>Situation</dt><dd>Concrete strength in existing structures needs to be checked without damaging them. The project was sponsored by Constrologix Engineering &amp; Research Services.</dd><dt>Task</dt><dd>Test whether combined non-destructive methods agree with cube compressive strength.</dd><dt>Action</dt><dd>Compared combined NDT readings on laboratory specimens and existing buildings against cube compression tests.</dd><dt>Result</dt><dd class="res">2nd prize at the state-level INNOVATION&ndash;2015 competition, presented at ICBCCE-2015 and published as a 2015 journal paper.</dd></dl></div>
+</div>
+<h2 class="ph">More Projects</h2>
 <p class="sub">Selected structural and materials work.</p>
 <div class="grid">
 <div class="card"><span class="tag">2023–24</span><h3>45-storey RCC building with outriggers</h3><p>Studied high-rise frames with concrete and steel-braced outrigger trusses, comparing placement configurations to reduce deflection against conventional systems with and without shear walls.</p></div>
@@ -255,7 +284,8 @@ nav a.on{color:var(--brand);background:var(--tint)}
 
 <section class="page wrap" id="contact">
 <h2>Contact</h2>
-<p class="sub">Open to junior- to mid-level civil and structural roles. Happy to relocate.</p>
+<p class="sub">Let&rsquo;s talk about on-site civil and structural roles.</p>
+<p class="avail">Available for on-site civil and structural engineering roles. Based in Riga, Latvia, and open to relocation.</p>
 <div class="contact">
 <div><p>Email</p><a href="mailto:nikhil.mulik@outlook.com">nikhil.mulik@outlook.com</a></div>
 <div><p>LinkedIn</p><a href="https://www.linkedin.com/in/nvmulik" target="_blank" rel="noopener">linkedin.com/in/nvmulik</a></div>
