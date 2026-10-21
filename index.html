@@ -154,6 +154,78 @@ nav a.on::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;hei
 .av{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:var(--surface);font:600 15px "IBM Plex Serif",Georgia,serif;transition:transform .3s ease}
 .rec .card:hover .av{transform:rotate(-8deg) scale(1.08)}
 .rec .who .by{margin:0;font-weight:600}
+@keyframes float{50%{transform:translateY(-9px)}}
+h1,h2,h3,.brand,.facts b{font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1{font-weight:600;letter-spacing:-.03em}
+header.nav{background:var(--surface);background:color-mix(in srgb,var(--surface) 80%,transparent);-webkit-backdrop-filter:saturate(1.5) blur(14px);backdrop-filter:saturate(1.5) blur(14px)}
+.brand{letter-spacing:-.01em}
+.brand::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;background:linear-gradient(135deg,var(--brand),var(--accent));margin-right:9px}
+nav a{border-radius:99px;padding:7px 13px}
+nav a.on{background:var(--tint);color:var(--brand)}
+nav a.on::after{display:none}
+.hero{background:radial-gradient(620px 320px at 88% 8%,rgba(31,74,168,.18),transparent 62%),radial-gradient(520px 300px at 6% 96%,rgba(194,65,12,.11),transparent 62%),radial-gradient(circle,var(--line) 1.2px,transparent 1.5px) 0 0/28px 28px,var(--surface);animation:none;border-bottom:0}
+.hero-text{background:transparent}
+.btn{border-radius:99px;padding:12px 24px}
+.btn.pri{background:var(--brand);border-color:var(--brand)}
+.draw{position:relative;padding:14px}
+.draw svg{position:relative;z-index:1;background:linear-gradient(160deg,var(--surface),var(--tint));border:1px solid var(--line);border-radius:28px;padding:20px 16px 12px;box-shadow:0 18px 44px rgba(10,20,40,.14)}
+.orb{position:absolute;inset:10% 4%;border-radius:50%;background:conic-gradient(from 200deg,var(--brand),var(--accent),var(--brand));filter:blur(50px);opacity:.3;z-index:0}
+.chip{position:absolute;z-index:3;white-space:nowrap;color:var(--ink);background:var(--surface);background:color-mix(in srgb,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:99px;padding:7px 14px;font-size:13px;font-weight:600;box-shadow:0 10px 26px rgba(10,20,40,.16);animation:float 6s ease-in-out infinite}
+.chip::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:8px}
+.c1{top:4%;left:-18px}.c2{top:42%;right:-22px;animation-delay:-2s}.c3{bottom:7%;left:-8px;animation-delay:-4s}
+.facts{border:0;border-radius:20px;box-shadow:0 16px 44px rgba(10,20,40,.13)}
+.facts>div{border-right-color:var(--line)}
+.facts b{background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:var(--brand);-webkit-text-fill-color:transparent}
+h2{font-size:1.9rem;border-bottom:0;padding-bottom:16px;letter-spacing:-.02em}
+h2::after{bottom:0;height:4px;width:56px;border-radius:4px;background:linear-gradient(90deg,var(--brand),var(--accent))}
+.page.wrap{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='160' viewBox='0 0 260 160' fill='none' stroke='%231f4aa8' stroke-opacity='.13' stroke-width='2'%3E%3Cpath d='M0 150h260M0 90h260M0 30h260M20 150V30M80 150V30M140 150V30M200 150V30M20 150L80 90L140 150L200 90L260 150M20 90L80 30L140 90L200 30L260 90'/%3E%3C/svg%3E") no-repeat right 0 top 22px/230px}
+.card{border-radius:18px;box-shadow:0 1px 2px rgba(10,20,40,.05),0 10px 30px rgba(10,20,40,.06)}
+.tag{background:var(--tint);border-color:transparent}
+.pubs li{border-radius:14px;box-shadow:0 1px 2px rgba(10,20,40,.04)}
+.chips li{border-radius:99px;padding:7px 15px}
+.pillar{border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 1px 2px rgba(10,20,40,.05),0 10px 30px rgba(10,20,40,.06)}
+.ic{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--tint);color:var(--brand);margin-bottom:14px;transition:background .25s,color .25s}
+.ic svg{width:25px;height:25px}
+.pillar:hover .ic{background:var(--brand);color:var(--surface)}
+.tl{margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+.tl>li{position:relative;border-bottom:0;padding:18px 0 22px}
+.tl>li::before{content:"";position:absolute;left:-35px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 5px var(--tint)}
+.thesis{border-radius:14px}
+.contact{border-radius:22px;background:linear-gradient(135deg,var(--surface),var(--tint));box-shadow:0 14px 40px rgba(10,20,40,.08)}
+html:root:root{--bg:#0a1019;--surface:#111a28;--ink:#f1f5fb;--muted:#9fb0c7;--line:#22314a;--brand:#ff7a1a;--accent:#ffb36b;--tint:#18243a;color-scheme:dark}
+body{background:radial-gradient(900px 520px at 100% 0,rgba(255,106,19,.09),transparent 62%),radial-gradient(800px 520px at 0 38%,rgba(24,92,120,.16),transparent 62%),var(--bg);background-repeat:no-repeat}
+.hero{position:relative;overflow:hidden;background:radial-gradient(760px 460px at 102% 104%,rgba(255,106,19,.62),transparent 62%),radial-gradient(900px 520px at -4% -6%,rgba(22,96,126,.62),transparent 64%),linear-gradient(165deg,#0a1626,#0b1220 62%,#15100e);border-bottom:1px solid var(--line)}
+.hero .wrap{position:relative;z-index:2;padding-top:96px;padding-bottom:84px}
+.mark{position:absolute;left:50%;top:2%;transform:translateX(-50%);z-index:1;white-space:nowrap;pointer-events:none;-webkit-user-select:none;user-select:none;font:600 clamp(5rem,21vw,16rem)/1 "IBM Plex Sans",system-ui,sans-serif;letter-spacing:.03em;color:rgba(255,255,255,.2);background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(255,255,255,0) 88%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h1{color:#fff}
+h1 em{font-style:normal;background:linear-gradient(90deg,#ff7a1a,#ffc58a);-webkit-background-clip:text;background-clip:text;color:#ff9a4d;-webkit-text-fill-color:transparent}
+.eyebrow{color:#ff9a4d}
+.role{color:#ffb36b}
+.hero-text .lead{color:#b9c6da}
+.rate{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:7px 15px;border-radius:99px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:13px;font-weight:500;color:#e6edf8}
+.rate i{width:8px;height:8px;border-radius:50%;background:#35d07f;box-shadow:0 0 0 4px rgba(53,208,127,.2)}
+.btn.pri{display:inline-flex;align-items:center;gap:14px;padding:6px 6px 6px 24px;border:0;color:#fff;background:linear-gradient(135deg,#ff8a1f,#f25c05)}
+.btn.pri::after{content:"\00bb";display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fff;color:#f25c05;font-weight:700}
+.btn.sec{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn.sec:hover{box-shadow:none;background:rgba(255,255,255,.1)}
+nav a.on{background:transparent;color:var(--brand)}
+nav a[href="#contact"]{background:linear-gradient(135deg,#ff8a1f,#f25c05);color:#fff;margin-left:6px}
+nav a[href="#contact"]:hover{background:linear-gradient(135deg,#ff9a3d,#ff6a13);color:#fff}
+.draw svg{color:#d7e6ff;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);box-shadow:0 26px 64px rgba(0,0,0,.45)}
+.orb{inset:4%;background:radial-gradient(circle,rgba(255,255,255,.1),transparent 66%);border:2px solid rgba(255,255,255,.14);filter:none;opacity:1}
+.chip{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.22);box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.statcard{position:absolute;right:-12px;bottom:6%;z-index:3;width:188px;padding:16px 16px 14px;border-radius:16px;background:#fff;color:#0b1220;box-shadow:0 18px 44px rgba(0,0,0,.4);animation:float 7s ease-in-out infinite;overflow:hidden}
+.statcard::after{content:"";position:absolute;top:0;right:0;width:40px;height:40px;background:#ff7a1a;border-bottom-left-radius:100%}
+.statcard b{display:block;font:600 2rem/1 "IBM Plex Sans",system-ui,sans-serif;color:#f25c05}
+.statcard span{display:block;margin-top:4px;font-weight:600;font-size:13.5px}
+.statcard .bar{display:block;height:7px;border-radius:99px;background:#e6eaf1;margin:10px 0}
+.statcard .bar u{display:block;height:100%;border-radius:99px;background:#ff7a1a}
+.statcard small{display:block;color:#56627a;font-size:12px;line-height:1.4}
+h2::after{background:linear-gradient(90deg,#ff7a1a,#ffc58a)}
+.facts{border:1px solid var(--line);background:var(--surface)}
+.card,.pillar{box-shadow:0 12px 34px rgba(0,0,0,.32)}
+.card:hover,.pillar:hover,.pubs li:hover{box-shadow:0 16px 40px rgba(255,106,19,.16)}
+@media (max-width:760px){.statcard{display:none}.hero .wrap{padding-top:64px;padding-bottom:56px}.mark{top:3%}.chip,.orb{display:none}.page.wrap{background-size:150px}.draw{padding:0}.draw svg{padding:12px 10px 8px;border-radius:20px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media print{#viewer{display:none!important}}
 </style>
@@ -167,15 +239,16 @@ nav a.on::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;hei
 </nav></div></header>
 
 <main id="top">
-<div class="page" id="home"><div class="hero"><div class="wrap">
+<div class="page" id="home"><div class="hero"><div class="mark" aria-hidden="true">MULIK</div><div class="wrap">
 <div class="hero-text">
+<p class="rate"><i></i>Open to on-site roles &middot; Europe &amp; India</p>
 <p class="eyebrow">Nikhil Mulik</p>
-<h1>Bridging structural research and on-site delivery</h1>
+<h1>Bridging structural research and <em>on-site delivery</em></h1>
 <p class="role">Former Assistant Professor and Structural Engineer · Seeking on-site civil and structural roles</p>
-<p class="lead">Six years of structural design teaching, research and consultancy, plus on-site RCC supervision on projects worth ₹5 Cr+. MSc in Civil Construction and Real Estate Management (RTU, Distinction). Based in Riga, Latvia, and open to relocation.</p>
+<p class="lead">Six years of structural design teaching, research and consultancy, plus on-site RCC supervision on projects worth ₹5 Cr+. MSc in Civil Construction and Real Estate Management (RTU, Distinction). Educated in Latvia, experienced in India, and open to on-site roles in Europe and India, with relocation.</p>
 <div class="btns"><a class="btn pri" href="#contact">Let&rsquo;s connect</a><a class="btn sec" href="#experience">View my experience</a><a class="btn sec" href="https://www.linkedin.com/in/nvmulik" target="_blank" rel="noopener">LinkedIn</a></div>
 </div>
-<div class="draw" aria-hidden="true">
+<div class="draw" aria-hidden="true"><div class="orb"></div><div class="statcard"><b>20%</b><span>Fewer project delays</span><i class="bar"><u style="width:20%"></u></i><small>On site projects worth ₹5 Cr+</small></div><span class="chip c3">7 IP filings</span>
 <svg viewBox="0 0 240 330" fill="none" stroke="currentColor" stroke-width="1.2">
 <g opacity=".55"><path d="M70 300V20M95 300V20M120 300V20M145 300V20M170 300V20"/><path d="M70 20h100M70 40h100M70 60h100M70 80h100M70 100h100M70 120h100M70 140h100M70 160h100M70 180h100M70 200h100M70 220h100M70 240h100M70 260h100M70 280h100"/></g>
 <rect x="95" y="20" width="50" height="280" stroke-width="2"/>
@@ -192,10 +265,10 @@ nav a.on::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;hei
 </div>
 <h2 class="ph">What I bring</h2>
 <div class="pillars">
-<a class="pillar" href="#experience"><b>On-site delivery</b><span>Supervised RCC works, subcontractors and programmes on projects worth ₹5 Cr+.</span><em>See experience</em></a>
-<a class="pillar" href="#projects"><b>Structural analysis &amp; design</b><span>ETABS, STAAD.Pro and Revit, with IS and Eurocode design experience.</span><em>See case studies</em></a>
-<a class="pillar" href="#research"><b>Research &amp; innovation</b><span>7 patent, design and copyright filings, 5 papers and 2 book contributions.</span><em>See research</em></a>
-<a class="pillar" href="#recommendations"><b>Leadership &amp; mentorship</b><span>Led labs, committees and accreditation work; mentored student teams for six years.</span><em>See recommendations</em></a>
+<a class="pillar" href="#experience"><i class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-5 8 5v12M9 21v-6h6v6M8 11h.01M12 11h.01M16 11h.01"/></svg></i><b>On-site delivery</b><span>Supervised RCC works, subcontractors and programmes on projects worth ₹5 Cr+.</span><em>See experience</em></a>
+<a class="pillar" href="#projects"><i class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V3M3 21h18M7 16l4-5 3 3 5-7"/></svg></i><b>Structural analysis &amp; design</b><span>ETABS, STAAD.Pro and Revit, with IS and Eurocode design experience.</span><em>See case studies</em></a>
+<a class="pillar" href="#research"><i class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5.5 9.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3M8 15h8"/></svg></i><b>Research &amp; innovation</b><span>7 patent, design and copyright filings, 5 papers and 2 book contributions.</span><em>See research</em></a>
+<a class="pillar" href="#recommendations"><i class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5.5a3 3 0 0 1 0 5M18 14.5c1.8.8 3 2.6 3 5.5"/></svg></i><b>Leadership &amp; mentorship</b><span>Led labs, committees and accreditation work; mentored student teams for six years.</span><em>See recommendations</em></a>
 </div>
 </div></div>
 
@@ -323,7 +396,7 @@ nav a.on::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;hei
 <section class="page wrap" id="contact">
 <h2>Contact</h2>
 <p class="sub">Let&rsquo;s talk about on-site civil and structural roles.</p>
-<p class="avail">Available for on-site civil and structural engineering roles. Based in Riga, Latvia, and open to relocation.</p>
+<p class="avail">Available for on-site civil and structural engineering roles. Educated in Latvia, experienced in India, and open to relocation to Europe or India.</p>
 <div class="contact">
 <div><p>Email</p><a href="mailto:nikhil.mulik@outlook.com">nikhil.mulik@outlook.com</a></div>
 <div><p>LinkedIn</p><a href="https://www.linkedin.com/in/nvmulik" target="_blank" rel="noopener">linkedin.com/in/nvmulik</a></div>
