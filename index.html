@@ -98,6 +98,10 @@ nav a.on{color:var(--brand);background:var(--tint)}
 .vbody{flex:1;overflow:auto;padding:12px;text-align:center;-webkit-overflow-scrolling:touch}
 #vcanvas{background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.4);margin:0 auto;display:inline-block;pointer-events:none}
 #vmsg{color:#cdd5e8;margin-top:40px}
+.rec .card{border-left:3px solid var(--brand)}
+.rec .by{margin:12px 0 0;font-weight:600;color:var(--ink)}
+.about{max-width:72ch}
+.about p{margin:0 0 1.15em;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;line-height:1.8;font-size:1.03rem}
 @media print{#viewer{display:none!important}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
@@ -106,7 +110,7 @@ nav a.on{color:var(--brand);background:var(--tint)}
 <header class="nav"><div class="wrap">
 <a class="brand" href="#home">Nikhil Mulik</a>
 <nav aria-label="Sections">
-<a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+<a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#skills">Skills</a><a href="#recommendations">Recommendations</a><a href="#contact">Contact</a>
 </nav></div></header>
 
 <main id="top">
@@ -136,7 +140,7 @@ nav a.on{color:var(--brand);background:var(--tint)}
 <section class="page wrap" id="about">
 <h2>About</h2>
 <p class="sub">Technical depth from academia, applied on site.</p>
-<p style="max-width:70ch">I am a civil engineer moving from structural academia and research into full-time industry practice. I hold a 2026 MSc in Civil Construction and Real Estate Management from Riga Technical University (Distinction) and a Master&rsquo;s in Structural Engineering. My grounding covers structural design software, concrete technology and construction quality assessment, backed by peer-reviewed research and patented innovation. I am looking for a junior- to mid-level civil or structural engineering role where technical depth and a fast learning curve add value.</p>
+<div class="about"><p>I am a civil engineer moving from structural academia and research into full-time industry practice. I hold a 2026 MSc in Civil Construction and Real Estate Management from Riga Technical University (Distinction) and a Master&rsquo;s in Structural Engineering.</p><p>My grounding covers structural design software, concrete technology and construction quality assessment, backed by peer-reviewed research and patented innovation.</p><p>I am looking for a junior- to mid-level civil or structural engineering role where technical depth and a fast learning curve add value.</p></div>
 </section>
 
 <section class="page wrap" id="experience">
@@ -235,6 +239,18 @@ nav a.on{color:var(--brand);background:var(--tint)}
 <ul class="chips"><li><b>English</b> IELTS 7</li></ul>
 </section>
 
+<section class="page wrap" id="recommendations">
+<h2>Recommendations</h2>
+<p class="sub">Summarised from letters of recommendation.</p>
+<div class="grid rec">
+<div class="card"><p>Taught first-year courses through to Structural Analysis and Structural Design, and guided student seminars and industry-sponsored projects. Also took on ERP, laboratory and NAAC accreditation duties, and was invited as an external examiner by other institutes.</p><p class="by">Prof. Vijay Wairagade</p></div>
+<div class="card"><p>Worked alongside Nikhil on the Research and Development Committee for two years and valued his organisation and attention to detail in running IPR seminars and workshops. Also noted his four patent publications and his proactive pursuit of research grants from government agencies.</p><p class="by">Dr. Poorna Shankar</p></div>
+<div class="card"><p>Guided Nikhil&rsquo;s Master&rsquo;s project on recycled aggregate concrete, later published in a journal, and called him one of the exceptional students of his career. Highlighted his organisation of a two-day state-level workshop and his initiative in learning STAAD.Pro and ANSYS.</p><p class="by">Dr. G. R. Patil</p></div>
+<div class="card"><p>Mentored Nikhil&rsquo;s final-year SONREB project, which won 2nd prize at INNOVATION&ndash;2015, and praised his steady commitment, practical knowledge and communication skills. He was the anchor for the department&rsquo;s technical and non-technical events.</p><p class="by">Mr. Sachin Patil</p></div>
+<div class="card"><p>A fellow Structural Engineering student at Rajarshi Shahu College of Engineering, who describes Nikhil as a positive, supportive teammate who helped friends with the practical side of their projects.</p><p class="by">Mr. Ranjit Rangrao Chavan</p></div>
+</div>
+</section>
+
 <section class="page wrap" id="contact">
 <h2>Contact</h2>
 <p class="sub">Open to junior- to mid-level civil and structural roles. Happy to relocate.</p>
@@ -271,7 +287,7 @@ document.addEventListener("keydown",function(e){if(v.hidden)return;if(e.key==="E
 v.addEventListener("contextmenu",function(e){e.preventDefault()});v.addEventListener("dragstart",function(e){e.preventDefault()});
 window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(render,200)});
 })();
-(function(){var ids=["home","about","experience","education","projects","research","skills","contact"];
+(function(){var ids=["home","about","experience","education","projects","research","skills","recommendations","contact"];
 function show(){var h=(location.hash||"#home").slice(1);if(ids.indexOf(h)<0)h="home";
 ids.forEach(function(i){document.getElementById(i).classList.toggle("on",i===h)});
 document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});
