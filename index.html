@@ -281,7 +281,12 @@ h2::after{display:none}
 .av{display:none}
 .tl>li::before{box-shadow:none;width:9px;height:9px;left:-34px}
 .page.on :is(.grid,.pillars,.pubs,.tl,.chips,.facts)>*,.page.on h2,.hero-text>*{animation:none}
-@media (max-width:760px){nav{grid-template-columns:1fr}.fab{right:14px}.statcard{display:none}.hero .wrap{padding-top:64px;padding-bottom:56px}.mark{top:3%}.chip,.orb{display:none}.page.wrap{background-size:150px}.draw{padding:0}.draw svg{padding:12px 10px 8px;border-radius:20px}}
+html .hero .wrap{align-items:end;padding-bottom:0}
+.hero-text{padding-bottom:72px}
+.draw{position:relative;align-self:end;justify-content:center;padding:0}
+.draw svg{position:absolute;left:50%;top:6%;width:60%;max-width:none;height:auto;transform:translateX(-50%);opacity:.2;background:none;border:0;padding:0;z-index:0}
+.me{position:relative;z-index:1;display:block;width:100%;max-width:440px;height:auto}
+@media (max-width:760px){html .hero .wrap{padding-bottom:0}.draw{order:2;justify-content:center}.draw svg{display:none}.me{max-width:300px}.hero-text{padding-bottom:28px}nav{grid-template-columns:1fr}.fab{right:14px}.statcard{display:none}.hero .wrap{padding-top:64px;padding-bottom:56px}.mark{top:3%}.chip,.orb{display:none}.page.wrap{background-size:150px}.draw{padding:0}.draw svg{padding:12px 10px 8px;border-radius:20px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media print{#viewer{display:none!important}}
 </style>
@@ -304,8 +309,9 @@ h2::after{display:none}
 <p class="lead">Six years of structural design teaching, research and consultancy, plus on-site RCC supervision on projects worth ₹5 Cr+. MSc in Civil Construction and Real Estate Management (RTU, Distinction). Educated in Latvia, experienced in India, and open to on-site roles in Europe and India, with relocation.</p>
 <div class="btns"><a class="btn pri" href="#contact">Let&rsquo;s connect</a><a class="btn sec" href="#experience">View my experience</a><a class="btn sec" href="https://www.linkedin.com/in/nvmulik" target="_blank" rel="noopener">LinkedIn</a></div>
 </div>
-<div class="draw" aria-hidden="true">
-<svg viewBox="0 0 240 330" fill="none" stroke="currentColor" stroke-width="1.2">
+<div class="draw">
+<img class="me" src="nikhil-photo.webp" alt="Nikhil Mulik" width="693" height="701" fetchpriority="high">
+<svg aria-hidden="true" viewBox="0 0 240 330" fill="none" stroke="currentColor" stroke-width="1.2">
 <g opacity=".55"><path d="M70 300V20M95 300V20M120 300V20M145 300V20M170 300V20"/><path d="M70 20h100M70 40h100M70 60h100M70 80h100M70 100h100M70 120h100M70 140h100M70 160h100M70 180h100M70 200h100M70 220h100M70 240h100M70 260h100M70 280h100"/></g>
 <rect x="95" y="20" width="50" height="280" stroke-width="2"/>
 <g stroke="var(--accent)" stroke-width="2.4"><path d="M70 100L170 140M170 100L70 140M70 200L170 240M170 200L70 240"/><path d="M70 100h100M70 140h100M70 200h100M70 240h100"/></g>
