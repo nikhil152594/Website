@@ -6,7 +6,7 @@
 <title>Nikhil Mulik – Civil &amp; Structural Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f6f7fa;--surface:#fff;--ink:#14203a;--muted:#53607a;--line:#d8dee9;--brand:#1f4aa8;--accent:#c2410c;--tint:#eaf0fb;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -286,7 +286,11 @@ html .hero .wrap{align-items:end;padding-bottom:0}
 .draw{position:relative;align-self:end;justify-content:center;padding:0}
 .draw svg{position:absolute;left:50%;top:6%;width:60%;max-width:none;height:auto;transform:translateX(-50%);opacity:.2;background:none;border:0;padding:0;z-index:0}
 .me{position:relative;z-index:1;display:block;width:100%;max-width:440px;height:auto}
-@media (max-width:760px){html .hero .wrap{padding-bottom:0}.draw{order:2;justify-content:center}.draw svg{display:none}.me{max-width:300px}.hero-text{padding-bottom:28px}nav{grid-template-columns:1fr}.fab{right:14px}.statcard{display:none}.hero .wrap{padding-top:64px;padding-bottom:56px}.mark{top:3%}.chip,.orb{display:none}.page.wrap{background-size:150px}.draw{padding:0}.draw svg{padding:12px 10px 8px;border-radius:20px}}
+.mark{top:18px;font:700 clamp(3rem,11.6vw,9.6rem)/.95 "IBM Plex Sans",system-ui,sans-serif;letter-spacing:.015em;color:transparent;-webkit-text-fill-color:transparent;background:linear-gradient(180deg,#14203a 8%,rgba(20,32,58,.5) 58%,rgba(20,32,58,.06) 100%);-webkit-background-clip:text;background-clip:text}
+html .hero .wrap{padding-top:clamp(120px,15.5vw,215px)}
+.draw::before{content:"";position:absolute;left:50%;top:5%;width:min(92%,400px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:var(--tint);border:2px solid rgba(217,72,15,.35);box-shadow:0 0 0 16px rgba(217,72,15,.07);z-index:0}
+.draw svg{display:none}
+@media (max-width:760px){html .hero .wrap{padding-top:calc(11.6vw + 56px);padding-bottom:0}.draw{order:2;justify-content:center}.draw svg{display:none}.me{max-width:300px}.hero-text{padding-bottom:28px}nav{grid-template-columns:1fr}.fab{right:14px}.statcard{display:none}.hero .wrap{padding-top:64px;padding-bottom:56px}.mark{top:3%}.chip,.orb{display:none}.page.wrap{background-size:150px}.draw{padding:0}.draw svg{padding:12px 10px 8px;border-radius:20px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media print{#viewer{display:none!important}}
 </style>
@@ -468,7 +472,7 @@ html .hero .wrap{align-items:end;padding-bottom:0}
 </section>
 </main>
 <footer><div class="wrap">© 2026 Nikhil Vitthal Mulik. References available on request.</div></footer>
-<a class="fab" href="#contact" aria-label="Contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18v2.5H3zM5.5 17a6.5 6.5 0 0 1 13 0M12 10.5V17"/></svg>Contact</a>
+<a class="fab" href="#contact" aria-label="Contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Contact</a>
 <div id="viewer" hidden role="dialog" aria-modal="true" aria-label="Document reader"><div class="vbar"><b id="vtitle"></b><span class="vnav"><button type="button" id="vprev">Previous</button><span id="vpage"></span><button type="button" id="vnext">Next</button><button type="button" id="vzo" aria-label="Zoom out">&minus;</button><button type="button" id="vzi" aria-label="Zoom in">+</button><button type="button" id="vclose">Close</button></span></div><div class="vbody"><p id="vmsg">Loading document…</p><canvas id="vcanvas" hidden></canvas></div></div>
 <script>
 (function(){
