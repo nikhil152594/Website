@@ -541,7 +541,7 @@ if(localStorage.getItem("nm_owner")==="1"||navigator.webdriver)return;
 var last=+localStorage.getItem("nm_last")||0;
 if(Date.now()-last<43200000)return;
 localStorage.setItem("nm_last",String(Date.now()));
-var WORKER="";
+var WORKER="https://visit-notify.nikhil152594.workers.dev";
 if(WORKER){fetch(WORKER,{method:"POST"}).catch(function(){});return}
 function send(t){fetch("https://ntfy.sh/nikhil-site-38bdbc1b06d887b0",{method:"POST",body:t,headers:{"Title":"Website visit"}}).catch(function(){})}
 fetch("https://get.geojs.io/v1/ip/geo.json").then(function(r){return r.json()}).then(function(g){
