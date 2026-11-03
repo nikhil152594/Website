@@ -493,7 +493,7 @@ a.more{display:inline-block;text-decoration:none}
 </div>
 </section>
 </main>
-<footer><div class="wrap">© 2026 Nikhil Vitthal Mulik. References available on request.</div></footer>
+<footer><div class="wrap">© 2026 Nikhil Vitthal Mulik. References available on request.<br>This site tells the owner the approximate city and country of each visit. No other personal data is collected.</div></footer>
 <a class="fab" href="#contact" aria-label="Contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Contact</a>
 <div id="viewer" hidden role="dialog" aria-modal="true" aria-label="Document reader"><div class="vbar"><b id="vtitle"></b><span class="vnav"><button type="button" id="vprev">Previous</button><span id="vpage"></span><button type="button" id="vnext">Next</button><button type="button" id="vzo" aria-label="Zoom out">&minus;</button><button type="button" id="vzi" aria-label="Zoom in">+</button><button type="button" id="vclose">Close</button></span></div><div class="vbody"><p id="vmsg">Loading document…</p><canvas id="vcanvas" hidden></canvas></div></div>
 <script>
@@ -531,6 +531,24 @@ ids.forEach(function(i){document.getElementById(i).classList.toggle("on",i===h)}
 document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});
 document.body.classList.toggle("is-home",h==="home");closeMenu();window.scrollTo(0,0);document.getElementById(h).querySelectorAll(".grid,.pillars,.pubs,.tl,.chips,.facts").forEach(function(c){for(var i=0;i<c.children.length;i++)c.children[i].style.setProperty("--i",Math.min(i,8))})}
 window.addEventListener("hashchange",show);show()})();
+</script>
+<script>
+(function(){try{
+var q=new URLSearchParams(location.search);
+if(q.get("me")==="1")localStorage.setItem("nm_owner","1");
+if(q.get("me")==="0")localStorage.removeItem("nm_owner");
+if(localStorage.getItem("nm_owner")==="1"||navigator.webdriver)return;
+var last=+localStorage.getItem("nm_last")||0;
+if(Date.now()-last<43200000)return;
+localStorage.setItem("nm_last",String(Date.now()));
+var WORKER="";
+if(WORKER){fetch(WORKER,{method:"POST"}).catch(function(){});return}
+function send(t){fetch("https://ntfy.sh/nikhil-site-38bdbc1b06d887b0",{method:"POST",body:t,headers:{"Title":"Website visit"}}).catch(function(){})}
+fetch("https://get.geojs.io/v1/ip/geo.json").then(function(r){return r.json()}).then(function(g){
+var p=[g.city,g.region,g.country].filter(function(x){return x&&x!=="nil"});
+send("Someone opened your site from "+(p.length?p.join(", "):"an unknown location"))
+}).catch(function(){send("Someone opened your site (location lookup failed)")});
+}catch(e){}})();
 </script>
 </body>
 </html>
