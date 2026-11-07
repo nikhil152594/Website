@@ -291,6 +291,11 @@ html .hero .wrap{padding-top:clamp(120px,15.5vw,215px)}
 .draw::before{content:"";position:absolute;left:50%;top:5%;width:min(92%,400px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:var(--tint);border:2px solid rgba(217,72,15,.35);box-shadow:0 0 0 16px rgba(217,72,15,.07);z-index:0}
 .draw svg{display:none}
 a.more{display:inline-block;text-decoration:none}
+.pubs li.book{display:flex;gap:18px;align-items:flex-start}
+.pubs li.book img{width:96px;height:auto;flex:none;border-radius:4px;box-shadow:0 6px 16px rgba(10,20,40,.22)}
+.pubs li.book .bt{font-size:1.05rem;font-weight:600}
+.pubs li.book .isbn{display:inline-block;margin-top:8px;font-size:13px;font-weight:600;color:var(--brand);background:var(--tint);border-radius:999px;padding:3px 10px}
+@media (max-width:480px){.pubs li.book img{width:78px}.pubs li.book{gap:14px}}
 .pubs .btnrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .fold{border:1px solid var(--line);border-radius:6px;background:var(--surface);margin:0 0 12px}
 .fold summary{cursor:pointer;padding:15px 18px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
@@ -412,7 +417,7 @@ a.more{display:inline-block;text-decoration:none}
 <h2>Research &amp; Recognition</h2>
 <p class="sub">Publications, books, patent filings, one award and two conference talks.</p>
 <details class="fold"><summary>Books and chapters</summary><ul class="pubs">
-<li>Co-author, <em>Advance Concrete Technology</em><small>RG International Publication, 2024</small></li>
+<li class="book"><img src="book-cover.webp" alt="Cover of the book Advanced Concrete Technology" width="120" height="179" loading="lazy"><div><b class="bt">Advanced Concrete Technology</b><small>Co-author, with Mushtaque Ahmad, Atul Raj Singh and Hemanth Valmiki Rajeyyagari</small><small>RG International Publication, 2024</small><span class="isbn">ISBN 978-93-48151-33-9</span></div></li>
 <li>Chapter 28, &ldquo;Renewable Energy and the Path to a Sustainable Future&rdquo;<small><em>Transcending Boundaries: New Dimension in Multidisciplinary Research</em>, pp. 270–280, 2024</small><span class="btnrow"><button type="button" class="more" data-doc="pub-chapter.pdf" data-title="Chapter 28: Renewable Energy and the Path to a Sustainable Future (2024)">Read chapter</button></span></li>
 </ul></details>
 <details class="fold"><summary>Publications and methods</summary><ul class="pubs">
