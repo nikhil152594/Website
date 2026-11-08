@@ -301,6 +301,14 @@ a.more{display:inline-block;text-decoration:none}
 .figure-grid figure{margin:0}
 .figure-grid img{width:100%;height:auto;border-radius:8px;background:#fff}
 .figure-grid figcaption{font-size:.85rem;color:var(--muted);margin-top:6px}
+details.showmore{margin-top:10px}
+details.showmore>summary{cursor:pointer;font-weight:600;color:var(--brand);padding:6px 0;list-style:none}
+details.showmore>summary::-webkit-details-marker{display:none}
+details.showmore>summary::before{content:"+ "}
+details.showmore[open]>summary::before{content:"\2212 "}
+details.showmore[open]>summary{font-size:0}
+details.showmore[open]>summary::before{font-size:15px}
+details.showmore[open]>summary::after{content:"Show less";font-size:15px}
 .facts>div:last-child b{font-size:1.2rem;line-height:1.25}
 .pubs li.book{display:flex;gap:18px;align-items:flex-start}
 .pubs li.book img{width:96px;height:auto;flex:none;border-radius:4px;box-shadow:0 6px 16px rgba(10,20,40,.22)}
@@ -465,12 +473,10 @@ a.more{display:inline-block;text-decoration:none}
 <p class="sub">What I use, and where I have used it.</p>
 <h4 style="margin-top:0">Software</h4>
 <ul class="pubs">
+<li>ETABS and STAAD.Pro<small>Structural analysis and design; student design projects guided as Assistant Professor</small></li>
 <li>Revit<small>Structural modelling and coordination on site at Shereasava Enterprises; BIM projects with students</small></li>
-<li>STAAD.Pro and ETABS<small>Structural analysis and design; student design projects guided as Assistant Professor</small></li>
 <li>AutoCAD<small>2D and 3D drafting</small></li>
-<li>SketchUp<small>3D and architectural modelling</small></li>
-<li>ANSYS<small>Familiar from postgraduate studies</small></li>
-<li>Microsoft Office</li>
+<li>Also: SketchUp, ANSYS and Microsoft Office</li>
 </ul>
 <h4>Site and quality</h4>
 <ul class="chips"><li>RCC site supervision</li><li>Site inspections and progress reports</li><li>Look-ahead planning</li><li>Subcontractor and resource coordination</li><li>Land surveying</li><li>Concrete quality assessment and NDT</li></ul>
@@ -479,12 +485,16 @@ a.more{display:inline-block;text-decoration:none}
 <h4>Courses and certificates</h4>
 <ul class="pubs">
 <li>Civil Engineering (Applied Construction Project)<small>University of Nottingham, Kuala Lumpur</small></li>
-<li>Sustainable Construction Materials<small>Rajasthan Technical University, Kota</small></li>
 <li>Hydration, Porosity and Strength of Cementitious Material; Development and Application of Special Concrete<small>IIT Kanpur</small></li>
+<li>Sustainable Construction Materials<small>Rajasthan Technical University, Kota</small></li>
+</ul>
+<details class="showmore"><summary>Show more</summary>
+<ul class="pubs">
+<li>Faculty Development Programs: Advances in Construction Technologies and Sustainable Materials (Indian Concrete Institute, Pune); Precast Building Technologies in Housing (UltraTech and ICI); Mathematical Modelling (AICTE and ISTE)</li>
 <li>Smart Cities<small>Kumaraguru College of Technology, Coimbatore</small></li>
 <li>AutoCAD<small>CADD Centre Training Services, Aundh</small></li>
-<li>Faculty Development Programs: Advances in Construction Technologies and Sustainable Materials (Indian Concrete Institute, Pune); Precast Building Technologies in Housing (UltraTech and ICI); Mathematical Modelling (AICTE and ISTE)</li>
 </ul>
+</details>
 <h4>Languages</h4>
 <ul class="chips"><li><b>English</b> IELTS 7</li></ul>
 </section>
